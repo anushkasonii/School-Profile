@@ -1,0 +1,37 @@
+.admin-dashboard-form{
+  padding: 15px;
+}
+
+.form-group{
+  font-size: 18px;
+}
+
+.floating-label {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.floating-label input {
+  width: 90%;
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 2px solid #cac7c7;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.floating-label label {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  background: #f9f9f9;
+  color: #aaa;
+  font-size: 20px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
