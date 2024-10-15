@@ -1,13 +1,10 @@
 import * as React from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
 import { useState } from 'react';
 import Select from 'react-select';
 import Chip from '@mui/material/Chip';
-
+import { Box, TextField, InputAdornment, Button } from '@mui/material';
 import './App.css';
-import InputAdornment from '@mui/material/InputAdornment';
 import LocationOn from '@mui/icons-material/LocationOn';
 
 
@@ -327,7 +324,6 @@ return (
       </div>
       
   </Box>
-
   {/* ABOUT US */}
   <Box
       component="form"
@@ -364,10 +360,43 @@ return (
           }}
         />
       </div>
-      <div style={{ marginBottom: '10px' }}>  </div>
+      
   </Box>
-         
-        
+  <div style={{ marginBottom: '-15px' }}>  </div>
+  {/* ADD IMAGES */}
+  <Box
+  component="form"
+  sx={{ '& .MuiTextField-root': { m: 1, width: '61.5ch', marginLeft: 3.5 } }}
+  noValidate
+  autoComplete="off"
+>
+  <div>
+    {/* Label for File Input */}
+    <label style={{ margin: '16px 0', display: 'block', marginLeft: 30, fontWeight:'bolder', fontSize:'17px', color:'#656565'}}>
+      Add Images
+    </label>
+    <div style={{ marginBottom: '-12px' }}>  </div>
+    {/* File Input */}
+    <input
+      type="file"
+      accept="image/*"
+      multiple
+      style={{
+        margin: '16px 0', // Add some margin
+        display: 'block', // Ensure it behaves like a block element
+        width: '61.5ch', // Match the width of the TextField
+        marginLeft: 30, // Align with the TextField
+      }}
+      onChange={(e) => {
+        const files = e.target.files;
+        // Handle the file selection
+        console.log(files);
+      }}
+    />
+  </div>
+</Box>
+
+    
        </div> 
        </div>
 
@@ -1072,4 +1101,3 @@ return (
 }
 
 export default AdminDashboardForm;
-
